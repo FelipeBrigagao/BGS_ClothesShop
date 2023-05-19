@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour
 
     protected Vector2 _input;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _currentMoveSpeed = _baseMoveSpeed;

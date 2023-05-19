@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -44,7 +44,7 @@ TagManager:
   - name: Base
     uniqueID: 100273221
     locked: 0
-  - name: Walls
+  - name: Frontground
     uniqueID: 2870686523
     locked: 0
   - name: Player

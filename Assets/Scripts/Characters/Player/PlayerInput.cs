@@ -24,7 +24,7 @@ public class PlayerInput : MonoBehaviour
         if (_canReceiveInputs)
         {
             ReceiveMoveInputs();
-
+            CheckForInteraction();
         }
     }
 
@@ -32,14 +32,14 @@ public class PlayerInput : MonoBehaviour
     {
         _input.x = Input.GetAxisRaw("Horizontal");
         _input.y = Input.GetAxisRaw("Vertical");
-        _player.CharacterMovement.SetInput(_input);
+        _player.PlayerMovement.SetInput(_input);
     }
 
-    private void CheckForINteraction()
+    private void CheckForInteraction()
     {
-        if (Input.GetKeyDown(_inventoryKey))
+        if (Input.GetKeyDown(_interactionKey))
         {
-            //interact
+            _player.PlayerAction.InteractWithClosestObject();
         }
     }
 
