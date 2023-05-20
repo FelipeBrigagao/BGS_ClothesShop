@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAction : MonoBehaviour
 {
     [Header("Interaction parameters")]
+    [SerializeField] private Player _player;
     [SerializeField] private float _checkInteractablesRatio;
     [SerializeField] private Vector3 _checkOffset;
     [SerializeField] private LayerMask _interactablesLayer;
@@ -22,7 +23,7 @@ public class PlayerAction : MonoBehaviour
         if(_closestInteractable != null)
         {
             Debug.Log("Interacting");
-            _closestInteractable.Interact();
+            _closestInteractable.Interact(gameObject);
         }
     }
 
@@ -35,8 +36,7 @@ public class PlayerAction : MonoBehaviour
             if(_closestInteractable != null)
             {
                 _closestInteractable = null;
-                Debug.Log("No closest Object");
-                //desligar UI de interagir
+                _player.PlayerUI.TurnInteractionButtonOFF();
             }
 
             return;
@@ -51,15 +51,13 @@ public class PlayerAction : MonoBehaviour
                     if((interactable.gameObject.transform.position - this.transform.position).magnitude < (_closestInteractable.gameObject.transform.position - this.transform.position).magnitude)
                     {
                         _closestInteractable = interactable;
-                        Debug.Log(_closestInteractable.gameObject.name);
-                        //trocar a ui de interagir de lugar
+                        _player.PlayerUI.PositionInteractButton(_closestInteractable.gameObject);
                     }
                 }
                 else
                 {
                     _closestInteractable = interactable;
-                    Debug.Log(_closestInteractable.gameObject.name);
-                    //trocar a ui de interagir de lugar
+                    _player.PlayerUI.PositionInteractButton(_closestInteractable.gameObject);
                 }
             }
         }

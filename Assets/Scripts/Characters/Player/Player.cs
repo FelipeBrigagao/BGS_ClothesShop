@@ -30,8 +30,20 @@ public class Player : MonoBehaviour
         _playerAnimation = GetComponent<PlayerAnimation>();
         _playerUI = GetComponent<PlayerUI>();
 
+        StartPlayer();
+    }
+
+
+    public void StartPlayer()
+    {
         _playerInput.StartReceivingInputs();
         _playerMovement.StartMovement();
+    }
+
+    public void StopPlayer()
+    {
+        _playerInput.StopReceivingInputs();
+        _playerMovement.StopMovement();
     }
 
 }

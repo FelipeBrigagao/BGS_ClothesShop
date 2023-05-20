@@ -7,6 +7,7 @@ public class PlayerAnimation : MonoBehaviour
 {
     [Header("Animation references")]
     [SerializeField] private Player _player;
+    [SerializeField] private Transform _playerModel;
     [SerializeField] private Animator _animator;
     
     [Header("Animation parameters")]
@@ -49,9 +50,9 @@ public class PlayerAnimation : MonoBehaviour
     private void ChangeFacingSide(bool changeSide)
     {
         _facingRight = changeSide;
-        _scale = transform.localScale;
+        _scale = _playerModel.localScale;
         _scale.x *= -1;
-        transform.localScale = _scale;
+        _playerModel.localScale = _scale;
     }
 
 

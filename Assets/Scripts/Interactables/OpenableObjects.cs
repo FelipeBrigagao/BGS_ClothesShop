@@ -8,7 +8,7 @@ public class OpenableObjects : MonoBehaviour, IInteractable
     [SerializeField] private GameObject _openObject;
     [SerializeField] private GameObject _closedObject;
 
-    public void Interact()
+    public void Interact(GameObject i)
     {
         OpenCloseObject();
     }
