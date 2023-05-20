@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a1932d01bee32594ba65afe143a268bb
+guid: 1d11f313ee72f8c42bc99d1895baf459
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreenPants_Down_0
+      name: RedCap_Up_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb1bdb53f440ec84a9aab9a1fabd560c
-      internalID: 1812229292
+      spriteID: 0e53c372216ad1748b203a8d4a67ba08
+      internalID: 95434350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Down_1
+      name: RedCap_Up_1
       rect:
         serializedVersion: 2
         x: 17
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82e9bb577a8c10746b1806d93dd5dd32
-      internalID: -521490046
+      spriteID: 1cd00d18071b4754b86cd5d609ff0c87
+      internalID: -2129068166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Down_2
+      name: RedCap_Up_2
       rect:
         serializedVersion: 2
         x: 34
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c536f8882bdd614e8037887587a5e69
-      internalID: 1201541696
+      spriteID: 4895f057fd385db48909629f2e663df9
+      internalID: -844993175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Down_3
+      name: RedCap_Up_3
       rect:
         serializedVersion: 2
         x: 51
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9350e973b663b5041929c07051a8a6fe
-      internalID: -1486941074
+      spriteID: 82ed1d56e2894af45bfcae8e485e21cf
+      internalID: -2066774117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Up_0
+      name: RedCap_Down_0
       rect:
         serializedVersion: 2
         x: 0
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ad43355bee589b49a8d5b571a163b97
-      internalID: 980592560
+      spriteID: 43c7934b25f1aa64d978643bcc8ef82e
+      internalID: -1352446005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Up_1
+      name: RedCap_Down_1
       rect:
         serializedVersion: 2
         x: 17
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e69d29e48d5ddb459c91030ec829b73
-      internalID: 1861935812
+      spriteID: 300b13771b14a42478c3f9c079d2b8d4
+      internalID: 950320594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Up_2
+      name: RedCap_Down_2
       rect:
         serializedVersion: 2
         x: 34
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e319e2a096969c94f86ad3b436521207
-      internalID: 1171746815
+      spriteID: 9ca043caed94f0345aab26380101b756
+      internalID: 426935762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Up_3
+      name: RedCap_Down_3
       rect:
         serializedVersion: 2
         x: 51
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8943058f67735fd478e0d8b147d38f1c
-      internalID: -1205237815
+      spriteID: ede1defbca8a61f4ea88748dd8320b95
+      internalID: -442436015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Left_0
+      name: RedCap_Right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -310,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90c4cc61cbfb28c43a1d4f3691702ee4
-      internalID: 1286957447
+      spriteID: f3209504a93b674468fcf2f738e041b8
+      internalID: -594564108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Left_1
+      name: RedCap_Right_1
       rect:
         serializedVersion: 2
         x: 17
@@ -331,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c89363263bfd1ea46a3f1d31e0878431
-      internalID: -1345188721
+      spriteID: a44c0873e1280734281c9af6d6f81790
+      internalID: -608200005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Left_2
+      name: RedCap_Right_2
       rect:
         serializedVersion: 2
         x: 34
@@ -352,14 +352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b6db66f6c9c2a544b31880decd04517
-      internalID: 1353242610
+      spriteID: 1aa6fac7fecd9de43963abe7263fe177
+      internalID: -455429673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Left_3
+      name: RedCap_Right_3
       rect:
         serializedVersion: 2
         x: 51
@@ -373,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b0400500e52b6b4f9e7f2f162a37450
-      internalID: -1557199070
+      spriteID: 2c8d790baf6d0144da8813712e7caebd
+      internalID: -1970721589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Right_0
+      name: RedCap_Left_0
       rect:
         serializedVersion: 2
         x: 0
@@ -394,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5784b50daf9814b42a6026db1e9713bf
-      internalID: 1704838952
+      spriteID: 1e1f981c10776844fa9c3ef2aa641ed1
+      internalID: 555975709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Right_1
+      name: RedCap_Left_1
       rect:
         serializedVersion: 2
         x: 17
@@ -415,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac97c4e59f41ede4aaa921650888e517
-      internalID: -1312153519
+      spriteID: 8b78ba1f9a6e2594aad2940e6636f22d
+      internalID: -1623792947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Right_2
+      name: RedCap_Left_2
       rect:
         serializedVersion: 2
         x: 34
@@ -436,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7781c1193ff7bc4da2517acd09336a5
-      internalID: -1641121618
+      spriteID: 9b1a6dcbb06235b4f996f97d0889cda3
+      internalID: -149400587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPants_Right_3
+      name: RedCap_Left_3
       rect:
         serializedVersion: 2
         x: 51
@@ -457,8 +457,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7492bf31e11ffef438fe13702e8b3b9e
-      internalID: -954813256
+      spriteID: 3e088ee8ec8f56a4c845e47fe75f67a5
+      internalID: 1050616347
       vertices: []
       indices: 
       edges: []
@@ -474,22 +474,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GreenPants_Down_2: 1201541696
-      GreenPants_Down_1: -521490046
-      GreenPants_Right_1: -1312153519
-      GreenPants_Left_3: -1557199070
-      GreenPants_Right_2: -1641121618
-      GreenPants_Right_3: -954813256
-      GreenPants_Up_2: 1171746815
-      GreenPants_Left_1: -1345188721
-      GreenPants_Down_3: -1486941074
-      GreenPants_Right_0: 1704838952
-      GreenPants_Up_1: 1861935812
-      GreenPants_Down_0: 1812229292
-      GreenPants_Up_0: 980592560
-      GreenPants_Left_2: 1353242610
-      GreenPants_Left_0: 1286957447
-      GreenPants_Up_3: -1205237815
+      RedCap_Up_0: 95434350
+      RedCap_Right_0: -594564108
+      RedCap_Left_2: -149400587
+      RedCap_Up_3: -2066774117
+      RedCap_Down_0: -1352446005
+      RedCap_Down_2: 426935762
+      RedCap_Left_0: 555975709
+      RedCap_Right_2: -455429673
+      RedCap_Right_3: -1970721589
+      RedCap_Right_1: -608200005
+      RedCap_Left_1: -1623792947
+      RedCap_Left_3: 1050616347
+      RedCap_Up_2: -844993175
+      RedCap_Down_3: -442436015
+      RedCap_Up_1: -2129068166
+      RedCap_Down_1: 950320594
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
