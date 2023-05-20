@@ -27,7 +27,7 @@ public class PlayerEquip : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
             SwitchClothes(_testHeadClothes);
             SwitchClothes(_testTorsoClothes);
@@ -53,7 +53,7 @@ public class PlayerEquip : MonoBehaviour
 
     private void SwitchClothes(ClothesSO newClothes)
     {
-        switch(newClothes.ClothesPart)
+        switch (newClothes.ClothesPart)
         {
             case ClothesParts.Body:
                 ChangeClothesAux(_currentBodyClothes, newClothes, _player.PlayerSO.BaseBodyClothes);
@@ -75,9 +75,6 @@ public class PlayerEquip : MonoBehaviour
 
     private void ChangeClothesAux(ClothesSO currentClothes, ClothesSO newClothes, ClothesSO baseClothes)
     {
-
-        Debug.Log($"{baseClothes.ClothesPart}{newClothes.ClothesPart}");
-
         if (currentClothes != null)
         {
             if (!currentClothes.IsBase)
