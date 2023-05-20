@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
+using System.Linq;
 
 public class PlayerAnimation : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private Transform _playerModel;
     [SerializeField] private Animator _animator;
+    [SerializeField] private AnimatorOverrideController _controllerOverrider;
     
     [Header("Animation parameters")]
     [SerializeField] private string _walkingHorizontalAnimationKey;
@@ -31,5 +33,17 @@ public class PlayerAnimation : MonoBehaviour
 
         _animator.SetFloat(_walkingSpeedAnimationKey, input.magnitude);
     }
+
+    public void ChangeAnimSprites(ClothesSO baseClothes, ClothesSO clothesToChange)
+    {
+        ClipsInfo newClip;
+
+        foreach (ClipsInfo ci in baseClothes.ClipsInfo)
+        {
+            newClip = clothesToChange.ClipsInfo.FirstOrDefault(clip => clip.AnimationState == ci.AnimationState && clip.AnimationDirection == ci.AnimationDirection);
+            _controllerOverrider[ci.AnimationClip.name] = newClip.AnimationClip;
+        }
+    }
+
 
 }

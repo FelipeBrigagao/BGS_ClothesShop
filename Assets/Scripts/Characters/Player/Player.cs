@@ -5,17 +5,21 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("References")]
+    [SerializeField] private PlayerSO _playerSO;
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private PlayerAction _playerAction;
     [SerializeField] private PlayerAnimation _playerAnimation;
     [SerializeField] private PlayerUI _playerUI;
+    [SerializeField] private PlayerEquip _playerEquip;
 
+    public PlayerSO PlayerSO { get => _playerSO;}
     public PlayerMovement PlayerMovement { get => _playerMovement;}
     public PlayerInput PlayerInput { get => _playerInput;}
     public PlayerAction PlayerAction { get => _playerAction;}
     public PlayerAnimation PlayerAnimation { get => _playerAnimation;}
     public PlayerUI PlayerUI { get => _playerUI;}
+    public PlayerEquip PlayerEquip { get => _playerEquip;}
 
     private void Start()
     {
@@ -29,6 +33,9 @@ public class Player : MonoBehaviour
         _playerAction = GetComponent<PlayerAction>();
         _playerAnimation = GetComponent<PlayerAnimation>();
         _playerUI = GetComponent<PlayerUI>();
+        _playerEquip = GetComponent<PlayerEquip>();
+
+        _playerEquip.InitPlayerClothes();
 
         StartPlayer();
     }
