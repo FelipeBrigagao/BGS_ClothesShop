@@ -11,12 +11,9 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private Animator _animator;
     
     [Header("Animation parameters")]
-    [SerializeField] private string _walkingAnimationKey;
-
-    private bool _isMoving;
-    private bool _facingRight = false;
-
-    private Vector3 _scale;
+    [SerializeField] private string _walkingHorizontalAnimationKey;
+    [SerializeField] private string _walkingVerticalAnimationKey;
+    [SerializeField] private string _walkingSpeedAnimationKey;
 
     private void Start()
     {
@@ -26,34 +23,13 @@ public class PlayerAnimation : MonoBehaviour
 
     public void SetWalkingAnimation(Vector2 input)
     {
-        if (input.magnitude > 0.01f)
+        if(input.magnitude > 0)
         {
-            _isMoving = true;
-
-            if(_facingRight && input.x < 0) 
-            {
-                ChangeFacingSide(false);
-            }else if (!_facingRight && input.x > 0)
-            {
-                ChangeFacingSide(true);
-            }
-
-        }
-        else
-        {
-            _isMoving = false;
+            _animator.SetFloat(_walkingHorizontalAnimationKey, input.x);
+            _animator.SetFloat(_walkingVerticalAnimationKey, input.y);
         }
 
-        _animator.SetBool(_walkingAnimationKey, _isMoving);
+        _animator.SetFloat(_walkingSpeedAnimationKey, input.magnitude);
     }
-
-    private void ChangeFacingSide(bool changeSide)
-    {
-        _facingRight = changeSide;
-        _scale = _playerModel.localScale;
-        _scale.x *= -1;
-        _playerModel.localScale = _scale;
-    }
-
 
 }

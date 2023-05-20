@@ -9,10 +9,10 @@ public class InventoryBase : MonoBehaviour
     private int _maxSlots;
 
 
-    public bool AddItens(ItemSO item)
-    {
+    //public bool AddItens(ItemSO item)
+    //{
 
-    }
+    //}
 
 
     public void SetMaxSlots(int maxSlots)

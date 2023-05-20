@@ -12,6 +12,4 @@ public class ItemSO : ScriptableObject
 public enum ItemTypes
 {
     CLOTHING,
-    SKINS,
-    WEAPON
 }

@@ -2508,7 +2508,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &107726820
@@ -3515,7 +3515,9 @@ MonoBehaviour:
   _player: {fileID: 0}
   _playerModel: {fileID: 771410379}
   _animator: {fileID: 0}
-  _walkingAnimationKey: IsWalking
+  _walkingHorizontalAnimationKey: Horizontal
+  _walkingVerticalAnimationKey: Vertical
+  _walkingSpeedAnimationKey: Speed
 --- !u!114 &1291235013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3682,6 +3684,8 @@ GameObject:
   - component: {fileID: 1388066965}
   - component: {fileID: 1388066967}
   - component: {fileID: 1388066966}
+  - component: {fileID: 1388066969}
+  - component: {fileID: 1388066968}
   m_Layer: 0
   m_Name: TilemapGreenHouse
   m_TagString: Untagged
@@ -3895,6 +3899,53 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &1388066968
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388066964}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5875182}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9999999, y: 1.1750364}
+  m_EdgeRadius: 0
+--- !u!50 &1388066969
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388066964}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1525149032
 GameObject:
   m_ObjectHideFlags: 0
@@ -3976,6 +4027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1583925982}
   - component: {fileID: 1583925983}
+  - component: {fileID: 1583925984}
   m_Layer: 0
   m_Name: PlayerUIParent
   m_TagString: Untagged
@@ -4022,6 +4074,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!210 &1583925984
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583925981}
+  m_Enabled: 1
+  m_SortingLayerID: -1424280773
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &1668846333
 GameObject:
   m_ObjectHideFlags: 3
@@ -4128,6 +4191,8 @@ GameObject:
   - component: {fileID: 1674764119}
   - component: {fileID: 1674764121}
   - component: {fileID: 1674764120}
+  - component: {fileID: 1674764123}
+  - component: {fileID: 1674764122}
   m_Layer: 0
   m_Name: TilemapRedHouse
   m_TagString: Untagged
@@ -4341,6 +4406,53 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &1674764122
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674764118}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0071988106, y: 0.6658416}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.0143976, y: 1.3316832}
+  m_EdgeRadius: 0
+--- !u!50 &1674764123
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674764118}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1739167071
 GameObject:
   m_ObjectHideFlags: 0
