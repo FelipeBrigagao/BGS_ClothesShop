@@ -43,6 +43,12 @@ public class PlayerAnimation : MonoBehaviour
             newClip = clothesToChange.ClipsInfo.FirstOrDefault(clip => clip.AnimationState == ci.AnimationState && clip.AnimationDirection == ci.AnimationDirection);
             _controllerOverrider[ci.AnimationClip.name] = newClip.AnimationClip;
         }
+
+        for (int i = 0; i < _animator.layerCount; i++)
+        {
+            var currentState = _animator.GetCurrentAnimatorStateInfo(i);
+            _animator.Play(currentState.fullPathHash, i, 0f);
+        }
     }
 
 
