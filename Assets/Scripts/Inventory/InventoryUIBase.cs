@@ -5,12 +5,12 @@ using UnityEngine;
 public class InventoryUIBase : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform _slotsHolder;
-    [SerializeField] private InventorySlotBase _slotPrefab;
+    [SerializeField] protected Transform _slotsHolder;
+    [SerializeField] protected InventorySlotBase _slotPrefab;
 
-    private List<InventorySlotBase> _slots = new List<InventorySlotBase>();
+    protected List<InventorySlotBase> _slots = new List<InventorySlotBase>();
 
-    private InventoryBase _inventory;
+    protected InventoryBase _inventory;
 
     public InventoryBase Inventory { get => _inventory;}
 
@@ -57,7 +57,7 @@ public class InventoryUIBase : MonoBehaviour
         CreateSlots(slotsAmount);
     }
 
-    private void CreateSlots(int slotsAmount)
+    protected void CreateSlots(int slotsAmount)
     {
         InventorySlotBase newSlot;
 
@@ -69,7 +69,7 @@ public class InventoryUIBase : MonoBehaviour
         }
     }
 
-    private void ResetSlotsReference()
+    protected void ResetSlotsReference()
     {
         foreach(InventorySlotBase slot in _slotsHolder)
         {

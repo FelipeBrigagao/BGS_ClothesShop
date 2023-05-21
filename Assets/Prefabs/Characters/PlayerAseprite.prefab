@@ -132,8 +132,6 @@ GameObject:
   - component: {fileID: 1679440558169655921}
   - component: {fileID: 1679440558169655928}
   - component: {fileID: 1679440558169655929}
-  - component: {fileID: 1247482812008510333}
-  - component: {fileID: 1247482812008510334}
   - component: {fileID: 1679440558169655920}
   - component: {fileID: 1679440558169655923}
   - component: {fileID: 4650678260415139606}
@@ -286,40 +284,6 @@ MonoBehaviour:
   _walkingHorizontalAnimationKey: Horizontal
   _walkingVerticalAnimationKey: Vertical
   _walkingSpeedAnimationKey: Speed
---- !u!114 &1247482812008510333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679440558169655934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f624cb659283c424883b374b46036f4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1679440558169655930}
-  _interactionButtonHolder: {fileID: 1679440557720023517}
-  _interactionButton: {fileID: 1679440559515618839}
-  _interactButtonOffset: {x: 0, y: 1, z: 0}
---- !u!114 &1247482812008510334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679440558169655934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 854f66ad0c92df849bf1a71ff5c44829, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1679440558169655930}
-  _checkInteractablesRatio: 1.12
-  _checkOffset: {x: 0, y: 0.5, z: 0}
-  _interactablesLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &1679440558169655920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1679440558169655930}
-  _checkInteractablesRatio: 1.12
+  _checkInteractablesRatio: 0.8
   _checkOffset: {x: 0, y: 0.5, z: 0}
   _interactablesLayer:
     serializedVersion: 2

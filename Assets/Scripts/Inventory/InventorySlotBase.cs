@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class InventorySlotBase : MonoBehaviour
 {
-    private InventoryUIBase _inventoryUI;
-    private Image _icon;
-    private ItemSO _item;
+    protected InventoryUIBase _inventoryUI;
+    protected Image _icon;
+    protected ItemSO _item;
 
     public void AddItem(ItemSO item)
     {
@@ -23,7 +23,7 @@ public class InventorySlotBase : MonoBehaviour
         _icon.sprite = null;
     }
 
-    public void SetInventoryReference(InventoryUIBase iUIbase)
+    public virtual void SetInventoryReference(InventoryUIBase iUIbase)
     {
         _inventoryUI = iUIbase;
     }

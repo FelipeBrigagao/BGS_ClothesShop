@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class InventoryUiShop : InventoryUIBase
 {
-    private InventoryBase _otherInventory;
+    private InventoryBase _clientInventory;
 
-    public InventoryBase OtherInventory { get => _otherInventory;}
+    public InventoryBase ClientInventory { get => _clientInventory;}
 
     public void SetOtherInventory(InventoryBase otherInventory)
     {
-        _otherInventory = otherInventory;
+        _clientInventory = otherInventory;
     }
 }
