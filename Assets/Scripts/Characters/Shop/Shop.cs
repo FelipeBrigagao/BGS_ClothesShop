@@ -7,8 +7,8 @@ public class Shop : MonoBehaviour, IInteractable
     [Header("Header")]
     [SerializeField] private ShopSO _shopInfo;
     [SerializeField] private InventoryBase _shopInventory;
-    [SerializeField] private InventoryUiShop _sellUi;
     [SerializeField] private InventoryUiShop _buyUi;
+    [SerializeField] private InventoryUiShop _sellUi;
 
     private InventoryBase _clientInventory;
 
@@ -21,15 +21,15 @@ public class Shop : MonoBehaviour, IInteractable
             _shopInventory.AddItens(item);
         }
 
-        _sellUi.SetInventory(_shopInventory);
-        _buyUi.SetOtherInventory(_shopInventory);
+        _buyUi.SetInventory(_shopInventory);
+        _sellUi.SetOtherInventory(_shopInventory);
     }
 
     public void Interact(GameObject interactor)
     {
         interactor.TryGetComponent<InventoryBase>(out _clientInventory);
-        _buyUi.SetInventory(_clientInventory);
-        _sellUi.SetOtherInventory(_clientInventory);
+        _sellUi.SetInventory(_clientInventory);
+        _buyUi.SetOtherInventory(_clientInventory);
         //Opens shop ui
     }
 }

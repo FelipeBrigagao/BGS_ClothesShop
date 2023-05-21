@@ -9,14 +9,14 @@ public class InventorySlotBase : MonoBehaviour
     protected Image _icon;
     protected ItemSO _item;
 
-    public void AddItem(ItemSO item)
+    public virtual void AddItem(ItemSO item)
     {
         _item = item;
         _icon.sprite = item.icon;
         _icon.enabled = true;
     }
 
-    public void RemoveItem()
+    public virtual void RemoveItem()
     {
         _item = null;
         _icon.enabled = false;

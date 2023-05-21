@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class InventoryBase : MonoBehaviour
 {
+    [SerializeField] private Currency _currency;
     [SerializeField] private List<ItemSO> _itens = new List<ItemSO>();
     private int _maxSlots;
 
-    public int MaxSlots { get => _maxSlots;}
+    public Currency Currency { get => _currency;}
     public List<ItemSO> Itens { get => _itens;}
+    public int MaxSlots { get => _maxSlots;}
 
     public event Action OnItemChange;
 

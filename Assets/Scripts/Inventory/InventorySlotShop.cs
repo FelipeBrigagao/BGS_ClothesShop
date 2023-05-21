@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySlotShop : InventorySlotBase
 {
+    [Header("References")]
+    [SerializeReference] private Text _priceTagUi; 
+
     [Header("Parameters")]
     [SerializeField] private bool _buy;
     [SerializeField] private bool _sell;
+    [SerializeField] private Color _enoughtMoneyColor;
+    [SerializeField] private Color _notEnoughtMoneyColor;
 
     private InventoryUiShop _uiShop;
 
@@ -14,6 +20,34 @@ public class InventorySlotShop : InventorySlotBase
     {
         _uiShop = (InventoryUiShop)iUIbase;
     }
+
+    public override void AddItem(ItemSO item)
+    {
+        base.AddItem(item);
+
+        if (_sell) return;
+
+        _priceTagUi.enabled = true;
+
+        _priceTagUi.text = $"$ {item.price}";
+
+        if (item.price <= _uiShop.ClientInventory.Currency.CurrentMoney)
+        {
+            _priceTagUi.color = _enoughtMoneyColor;
+
+        }
+        else if (item.price > _uiShop.ClientInventory.Currency.CurrentMoney)
+        {
+            _priceTagUi.color = _notEnoughtMoneyColor;
+
+        }
+    }
+
+    public override void RemoveItem()
+    {
+        base.RemoveItem();
+    }
+
 
     public override void Use()
     {
@@ -28,14 +62,18 @@ public class InventorySlotShop : InventorySlotBase
 
     private void Buy()
     {
-        //fazer as transações de moedas
-        _uiShop.Inventory.Remove(_item);
-        _uiShop.ClientInventory.AddItens(_item);
+        if (_uiShop.ClientInventory.Currency.RemoveMoney(_item.price))
+        {
+            _uiShop.Inventory.Remove(_item);
+            _uiShop.ClientInventory.AddItens(_item);
+            //could add the money to the shops currency
+        }
     }
 
     private void Sell()
     {
-        //fazer as transações de moedas
+        _uiShop.ClientInventory.Currency.AddMoney(_item.price);
+
         _uiShop.Inventory.Remove(_item);
         _uiShop.ClientInventory.AddItens(_item);
     }
