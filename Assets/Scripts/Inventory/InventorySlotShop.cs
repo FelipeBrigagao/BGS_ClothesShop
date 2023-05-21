@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static UnityEditor.Progress;
 
 public class InventorySlotShop : InventorySlotBase
 {
@@ -26,7 +27,7 @@ public class InventorySlotShop : InventorySlotBase
     {
         base.AddItem(item);
 
-        if (_sell) return;
+        if (_sell || _uiShop.ClientInventory == null) return;
 
         _priceTagUi.enabled = true;
 
@@ -47,6 +48,12 @@ public class InventorySlotShop : InventorySlotBase
     public override void RemoveItem()
     {
         base.RemoveItem();
+
+        if (_sell || _uiShop.ClientInventory == null) return;
+
+        _priceTagUi.enabled = false;
+
+        _priceTagUi.text = "";
     }
 
 
@@ -65,17 +72,21 @@ public class InventorySlotShop : InventorySlotBase
     {
         if (_uiShop.ClientInventory.Currency.RemoveMoney(_item.price))
         {
-            _uiShop.Inventory.Remove(_item);
-            _uiShop.ClientInventory.AddItens(_item);
+            ItemSO item = _item;
+
+            _uiShop.Inventory.Remove(item);
+            _uiShop.ClientInventory.AddItens(item);
             //could add the money to the shops currency
         }
     }
 
     private void Sell()
     {
-        _uiShop.ClientInventory.Currency.AddMoney(_item.price);
+        ItemSO item = _item;
 
-        _uiShop.Inventory.Remove(_item);
-        _uiShop.ClientInventory.AddItens(_item);
+        _uiShop.Inventory.Currency.AddMoney(item.price);
+
+        _uiShop.Inventory.Remove(item);
+        _uiShop.ClientInventory.AddItens(item);
     }
 }

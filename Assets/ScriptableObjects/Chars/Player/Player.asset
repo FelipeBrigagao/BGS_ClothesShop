@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   InitialMoney: 10
-  MaxInventorySlots: 10
+  MaxInventorySlots: 20
   BaseBodyClothes: {fileID: 11400000, guid: 33b8dc6214f1f8e4693f98af3edcdf20, type: 2}
   BaseHeadClothes: {fileID: 11400000, guid: 3914ffc0776a3c848831ccd8b9560e3a, type: 2}
   BaseTorsoClothes: {fileID: 11400000, guid: d96cf738a87aed041af88d7663e3792b, type: 2}

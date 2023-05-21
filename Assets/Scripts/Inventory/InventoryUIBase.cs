@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InventoryUIBase : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] protected Transform _slotsHolder;
     [SerializeField] protected InventorySlotBase _slotPrefab;
+    [SerializeField] protected TextMeshProUGUI _panelNameTxt;
+
+    [Header("References")]
+    [SerializeField] protected string _panelName;
 
     protected List<InventorySlotBase> _slots = new List<InventorySlotBase>();
 
     protected InventoryBase _inventory;
 
     public InventoryBase Inventory { get => _inventory;}
+
+    private void Start()
+    {
+        _panelNameTxt.text = _panelName;
+    }
 
     public void SetInventory(InventoryBase inventory)
     {
@@ -67,6 +77,8 @@ public class InventoryUIBase : MonoBehaviour
             _slots.Add(newSlot);
             newSlot.SetInventoryReference(this);
         }
+
+        UpdateSlots();
     }
 
     protected void ResetSlotsReference()
@@ -79,7 +91,7 @@ public class InventoryUIBase : MonoBehaviour
 
     public void UpdateSlots()
     {
-        for(int i = 0; i < _slots.Count; i++)
+        for (int i = 0; i < _slots.Count; i++)
         {
             if(i < _inventory.Itens.Count)
             {

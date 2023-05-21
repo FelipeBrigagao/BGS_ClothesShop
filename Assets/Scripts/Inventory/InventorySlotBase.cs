@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class InventorySlotBase : MonoBehaviour
 {
+    [Header("Parameters")]
+    [SerializeField] protected Image _icon;
+
     protected InventoryUIBase _inventoryUI;
-    protected Image _icon;
     protected ItemSO _item;
 
     public virtual void AddItem(ItemSO item)

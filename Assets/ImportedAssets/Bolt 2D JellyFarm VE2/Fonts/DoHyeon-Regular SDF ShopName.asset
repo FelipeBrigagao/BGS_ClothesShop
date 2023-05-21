@@ -57,11 +57,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: DoHyeon-Regular SDF
+  m_Name: DoHyeon-Regular SDF ShopName
   m_EditorClassIdentifier: 
-  hashCode: 391834008
+  hashCode: -1980860645
   material: {fileID: 4762054316140584248}
-  materialHashCode: -1353649608
+  materialHashCode: -1600566309
   m_Version: 1.1.0
   m_SourceFontFileGUID: 2d040b1040b12644dbfd6de09f5b5408
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 2d040b1040b12644dbfd6de09f5b5408, type: 3}
@@ -2511,8 +2511,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: DoHyeon-Regular SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ValidKeywords:
-  - UNDERLAY_ON
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -2570,7 +2569,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.357
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
@@ -2602,9 +2601,9 @@ Material:
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.7921569, g: 0.40784314, b: 0.44949648, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0.37274867, g: 0.29076183, b: 0.6226415, a: 1}
+    - _UnderlayColor: {r: 0.2901961, g: 0.62352943, b: 0.43915048, a: 1}
   m_BuildTextureStacks: []

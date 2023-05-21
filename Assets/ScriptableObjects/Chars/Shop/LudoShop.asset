@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062a4b3903c072647b6be70240f0d504, type: 3}
   m_Name: LudoShop
   m_EditorClassIdentifier: 
-  name: New Shop
+  ShopName: Ludo's Shop
   InitialMoney: 100
-  MaxSlots: 10
+  MaxSlots: 20
   Items:
   - {fileID: 11400000, guid: 38a771f57df980f428d5c6c6619c3c55, type: 2}
   - {fileID: 11400000, guid: beb564c00a0a0df4fbee8936e4169f29, type: 2}

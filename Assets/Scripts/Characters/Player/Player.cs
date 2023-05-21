@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerAnimation _playerAnimation;
     [SerializeField] private PlayerUI _playerUI;
     [SerializeField] private PlayerEquip _playerEquip;
-    [SerializeField] private InventoryBase _inventoryBase;
+    [SerializeField] private InventoryBase _playerInventory;
 
     public PlayerSO PlayerSO { get => _playerSO;}
     public PlayerMovement PlayerMovement { get => _playerMovement;}
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public PlayerAnimation PlayerAnimation { get => _playerAnimation;}
     public PlayerUI PlayerUI { get => _playerUI;}
     public PlayerEquip PlayerEquip { get => _playerEquip;}
-    public InventoryBase InventoryBase { get => _inventoryBase;}
+    public InventoryBase PlayerInventory { get => _playerInventory;}
 
     private void Start()
     {
@@ -36,8 +36,11 @@ public class Player : MonoBehaviour
         _playerAnimation = GetComponent<PlayerAnimation>();
         _playerUI = GetComponent<PlayerUI>();
         _playerEquip = GetComponent<PlayerEquip>();
+        _playerInventory = GetComponent<InventoryBase>();
 
         _playerEquip.InitPlayerClothes();
+        _playerInventory.SetMaxSlots(_playerSO.MaxInventorySlots);
+        _playerInventory.Currency.SetInicialMoney(_playerSO.InitialMoney);
 
         StartPlayer();
     }

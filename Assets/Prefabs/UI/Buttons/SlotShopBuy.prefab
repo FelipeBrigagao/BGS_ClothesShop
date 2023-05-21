@@ -230,6 +230,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7511605053324271827, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511605053324271827, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511605053324271827, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8007591621620219670}
+    - target: {fileID: 7511605053324271827, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511605053324271827, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Use
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511605053324271827, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventorySlotShop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511605053324271827, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
 --- !u!224 &1056336669052839875 stripped
@@ -254,8 +282,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4c3c8143fd48849a3125964c356f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _icon: {fileID: 1981675321030762158}
   _priceTagUi: {fileID: 4769132251362341555}
   _buy: 1
   _sell: 0
   _enoughtMoneyColor: {r: 1, g: 0.96304995, b: 0.495283, a: 1}
   _notEnoughtMoneyColor: {r: 1, g: 0.4764151, b: 0.4764151, a: 1}
+--- !u!114 &1981675321030762158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9013421739718856073, guid: 29e686ab90655914792fc362c4c1a33c, type: 3}
+  m_PrefabInstance: {fileID: 7392175439898972967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
