@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerAnimation _playerAnimation;
     [SerializeField] private PlayerUI _playerUI;
     [SerializeField] private PlayerEquip _playerEquip;
+    [SerializeField] private InventoryBase _inventoryBase;
 
     public PlayerSO PlayerSO { get => _playerSO;}
     public PlayerMovement PlayerMovement { get => _playerMovement;}
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     public PlayerAnimation PlayerAnimation { get => _playerAnimation;}
     public PlayerUI PlayerUI { get => _playerUI;}
     public PlayerEquip PlayerEquip { get => _playerEquip;}
+    public InventoryBase InventoryBase { get => _inventoryBase;}
 
     private void Start()
     {

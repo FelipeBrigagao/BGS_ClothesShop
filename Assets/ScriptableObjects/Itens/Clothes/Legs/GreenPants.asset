@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: GreenPants
   icon: {fileID: 1812229292, guid: a1932d01bee32594ba65afe143a268bb, type: 3}
-  price: 4
+  price: 7
   itemType: 0
   ClothesPart: 3
   ClipsInfo:

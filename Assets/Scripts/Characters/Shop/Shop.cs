@@ -15,6 +15,7 @@ public class Shop : MonoBehaviour, IInteractable
     public void Init()
     {
         _shopInventory.SetMaxSlots(_shopInfo.MaxSlots);
+        _shopInventory.Currency.SetInicialMoney(_shopInfo.InitialMoney);
         
         foreach(ItemSO item in _shopInfo.Items)
         {

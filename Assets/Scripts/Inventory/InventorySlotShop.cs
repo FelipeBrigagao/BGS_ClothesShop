@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventorySlotShop : InventorySlotBase
 {
     [Header("References")]
-    [SerializeReference] private Text _priceTagUi; 
+    [SerializeReference] private TextMeshProUGUI _priceTagUi; 
 
     [Header("Parameters")]
     [SerializeField] private bool _buy;

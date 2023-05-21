@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Player", menuName = "Character/Player")]
 public class PlayerSO : ScriptableObject
 {
+    public int InitialMoney;
     public int MaxInventorySlots;
 
     public ClothesSO BaseBodyClothes;

@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Shop", menuName = "Character/Shop")]
 public class ShopSO : ScriptableObject 
 {
-    public int MaxSlots;
+    new public string name = "New Shop";
+    public int InitialMoney = 10;
+    public int MaxSlots = 10;
     public List<ItemSO> Items;
 }
