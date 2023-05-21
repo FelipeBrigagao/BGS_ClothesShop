@@ -6,9 +6,10 @@ using UnityEngine;
 public class InventoryBase : MonoBehaviour
 {
     [SerializeField] private List<ItemSO> _itens = new List<ItemSO>();
-
     private int _maxSlots;
 
+    public int MaxSlots { get => _maxSlots;}
+    public List<ItemSO> Itens { get => _itens;}
 
     public event Action OnItemChange;
 

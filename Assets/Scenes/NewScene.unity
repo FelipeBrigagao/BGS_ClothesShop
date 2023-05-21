@@ -3797,37 +3797,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1679440558347119941, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.0029997826
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679440559163430983, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679440559515618836, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679440559515618839, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679440559515618839, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4650678260415139606, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
-      propertyPath: _testHeadClothes
-      value: 
-      objectReference: {fileID: 11400000, guid: 38a771f57df980f428d5c6c6619c3c55, type: 2}
-    - target: {fileID: 4650678260415139606, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
-      propertyPath: _testLegsClothes
-      value: 
-      objectReference: {fileID: 11400000, guid: beb564c00a0a0df4fbee8936e4169f29, type: 2}
-    - target: {fileID: 4650678260415139606, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
-      propertyPath: _testTorsoClothes
-      value: 
-      objectReference: {fileID: 11400000, guid: 465776e02422c0f47bcd3113cdc1cfdd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b915219b218ee5d499cd7fee1355736a, type: 3}
