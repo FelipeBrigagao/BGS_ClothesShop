@@ -12,7 +12,7 @@ public class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (_instance == null)
             {
-                Debug.Log("Manager not found");
+                //Debug.Log("Manager not found");
 
                 return FindObjectOfType<T>();
             }
@@ -26,13 +26,13 @@ public class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
     {
         if (_instance == null)
         {
-            Debug.Log($"Instantiated Manager:{GetComponent<T>().name}");
+            //Debug.Log($"Instantiated Manager:{GetComponent<T>().name}");
             _instance = GetComponent<T>();
 
         }
         else
         {
-            Debug.LogWarning($"Manager already exist: {GetComponent<T>().name} ");
+            //Debug.LogWarning($"Manager already exist: {GetComponent<T>().name} ");
             Destroy(gameObject);
         }
     }

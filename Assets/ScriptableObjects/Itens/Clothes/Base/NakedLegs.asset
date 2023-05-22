@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NakedLegs
   m_EditorClassIdentifier: 
   name: NakedLegs
-  icon: {fileID: 21300000, guid: 92ca921ade6e944868364b1813c7568f, type: 3}
+  icon: {fileID: 21300000, guid: 0e6407347fc834e6a8b46f9528bcf7b3, type: 3}
   price: 0
   itemType: 0
   ClothesPart: 3

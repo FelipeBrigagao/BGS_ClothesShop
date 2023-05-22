@@ -18,6 +18,28 @@ public class PlayerUI : MonoBehaviour
     [Header("Parameters")]
     [SerializeField] private Vector3 _interactButtonOffset;
 
+    private void OnEnable()
+    {
+        if (UiManager.Instance)
+        {
+            UiManager.Instance.OnPlayerInventoryOpen += InventoryOn;
+            UiManager.Instance.OnShopInventoryOpen += ShopOn;
+            UiManager.Instance.OnPlayerInventoryClose += InventoryOff;
+            UiManager.Instance.OnShopInventoryClose += ShopOff;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (UiManager.Instance)
+        {
+            UiManager.Instance.OnPlayerInventoryOpen -= InventoryOn;
+            UiManager.Instance.OnShopInventoryOpen -= ShopOn;
+            UiManager.Instance.OnPlayerInventoryClose -= InventoryOff;
+            UiManager.Instance.OnShopInventoryClose -= ShopOff;
+        }
+    }
+
     public void PositionInteractButton(GameObject positionObject)
     {
         TurnInteractionButtonON();
@@ -57,21 +79,27 @@ public class PlayerUI : MonoBehaviour
     private void InventoryOn()
     {
         _inventoryUi.gameObject.SetActive(true);
+        _inventoryButton.gameObject.SetActive(false);
+        _currencyUi.gameObject.SetActive(false);
         _player.PlayerAnimation.MakePlayerLookDown();
+        TurnInteractionButtonOFF();
     }
 
     private void InventoryOff()
     {
         _inventoryUi.gameObject.SetActive(false);
-
+        _inventoryButton.gameObject.SetActive(true);
+        _currencyUi.gameObject.SetActive(true);
     }
     private void ShopOn()
     {
-
+        _inventoryButton.gameObject.SetActive(false);
+        TurnInteractionButtonOFF();
     }
 
     private void ShopOff()
     {
+        _inventoryButton.gameObject.SetActive(true);
 
     }
 }

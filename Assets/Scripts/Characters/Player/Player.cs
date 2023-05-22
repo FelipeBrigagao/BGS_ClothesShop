@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
             UiManager.Instance.OnPlayerInventoryOpen += StopPlayer;
             UiManager.Instance.OnShopInventoryOpen += StopPlayer;
             UiManager.Instance.OnPlayerInventoryClose += StartPlayer;
-            UiManager.Instance.OnShopInventoryClose -= StartPlayer;
+            UiManager.Instance.OnShopInventoryClose += StartPlayer;
         }
     }
 
