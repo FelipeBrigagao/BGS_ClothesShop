@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RedCap_Up_0
+      name: RedCap_Down_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCap_Up_1
+      name: RedCap_Down_1
       rect:
         serializedVersion: 2
         x: 17
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCap_Up_2
+      name: RedCap_Down_2
       rect:
         serializedVersion: 2
         x: 34
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCap_Up_3
+      name: RedCap_Down_3
       rect:
         serializedVersion: 2
         x: 51
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCap_Down_0
+      name: RedCap_Up_0
       rect:
         serializedVersion: 2
         x: 0
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCap_Down_1
+      name: RedCap_Up_1
       rect:
         serializedVersion: 2
         x: 17
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCap_Down_2
+      name: RedCap_Up_2
       rect:
         serializedVersion: 2
         x: 34
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RedCap_Down_3
+      name: RedCap_Up_3
       rect:
         serializedVersion: 2
         x: 51
@@ -474,22 +474,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedCap_Up_0: 95434350
       RedCap_Right_0: -594564108
       RedCap_Left_2: -149400587
-      RedCap_Up_3: -2066774117
-      RedCap_Down_0: -1352446005
-      RedCap_Down_2: 426935762
       RedCap_Left_0: 555975709
+      RedCap_Up_3: 95434350
+      RedCap_Down_0: -2129068166
+      RedCap_Up_0: 950320594
+      RedCap_Down_2: -2066774117
       RedCap_Right_2: -455429673
       RedCap_Right_3: -1970721589
       RedCap_Right_1: -608200005
       RedCap_Left_1: -1623792947
       RedCap_Left_3: 1050616347
-      RedCap_Up_2: -844993175
-      RedCap_Down_3: -442436015
-      RedCap_Up_1: -2129068166
-      RedCap_Down_1: 950320594
+      RedCap_Up_2: -442436015
+      RedCap_Down_3: -2066774117
+      RedCap_Up_1: 426935762
+      RedCap_Down_1: -844993175
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

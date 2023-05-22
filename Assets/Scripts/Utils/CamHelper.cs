@@ -7,6 +7,7 @@ public class CamHelper : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera _mainCam;
     [SerializeField] private CinemachineVirtualCamera _inventoryCam;
+    [SerializeField] private CinemachineConfiner2D _confiner;
 
     private void OnEnable()
     {
@@ -25,6 +26,7 @@ public class CamHelper : MonoBehaviour
         }
     }
 
+
     public void ChangeToMainCam()
     {
         _mainCam.gameObject.SetActive(true);
@@ -35,5 +37,10 @@ public class CamHelper : MonoBehaviour
     {
         _inventoryCam.gameObject.SetActive(true);
         _mainCam.gameObject.SetActive(false);
+    }
+
+    public void ChangeConfiner(Collider2D confiner)
+    {
+        _confiner.m_BoundingShape2D = confiner;
     }
 }
