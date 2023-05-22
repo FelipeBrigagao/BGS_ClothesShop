@@ -29,9 +29,10 @@ public class InventorySlotShop : InventorySlotBase
 
         if (_sell || _uiShop.ClientInventory == null) return;
 
+
         _priceTagUi.enabled = true;
 
-        _priceTagUi.text = $"$ {item.price}";
+        _priceTagUi.text = $"${item.price}";
 
         if (item.price <= _uiShop.ClientInventory.Currency.CurrentMoney)
         {

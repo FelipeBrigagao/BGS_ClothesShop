@@ -238,7 +238,7 @@ MonoBehaviour:
   _playerAnimation: {fileID: 1679440558169655929}
   _playerUI: {fileID: 1679440558169655920}
   _playerEquip: {fileID: 4650678260415139606}
-  _inventoryBase: {fileID: 5484639407276517642}
+  _playerInventory: {fileID: 5484639407276517642}
 --- !u!114 &1679440558169655921
 MonoBehaviour:
   m_ObjectHideFlags: 0

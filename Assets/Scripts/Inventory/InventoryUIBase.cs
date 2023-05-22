@@ -10,7 +10,7 @@ public class InventoryUIBase : MonoBehaviour
     [SerializeField] protected InventorySlotBase _slotPrefab;
     [SerializeField] protected TextMeshProUGUI _panelNameTxt;
 
-    [Header("References")]
+    [Header("Parameters")]
     [SerializeField] protected string _panelName;
 
     protected List<InventorySlotBase> _slots = new List<InventorySlotBase>();
@@ -83,7 +83,7 @@ public class InventoryUIBase : MonoBehaviour
 
     protected void ResetSlotsReference()
     {
-        foreach(InventorySlotBase slot in _slotsHolder)
+        foreach(InventorySlotBase slot in _slots)
         {
             slot.SetInventoryReference(this);
         }

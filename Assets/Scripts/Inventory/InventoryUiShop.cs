@@ -11,5 +11,6 @@ public class InventoryUiShop : InventoryUIBase
     public void SetOtherInventory(InventoryBase otherInventory)
     {
         _clientInventory = otherInventory;
+        UpdateSlots();
     }
 }

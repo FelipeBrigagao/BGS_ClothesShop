@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public PlayerEquip PlayerEquip { get => _playerEquip;}
     public InventoryBase PlayerInventory { get => _playerInventory;}
 
+
     private void Start()
     {
         InitPlayer();
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
         _playerEquip.InitPlayerClothes();
         _playerInventory.SetMaxSlots(_playerSO.MaxInventorySlots);
         _playerInventory.Currency.SetInicialMoney(_playerSO.InitialMoney);
+        _playerUI.InitInventoryUiPlayer(_playerInventory);
 
         StartPlayer();
     }

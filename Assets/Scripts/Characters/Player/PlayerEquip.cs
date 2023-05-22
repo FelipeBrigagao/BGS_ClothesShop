@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,17 @@ public class PlayerEquip : MonoBehaviour
     private ClothesSO _currentTorsoClothes;
     private ClothesSO _currentLegsClothes;
 
+    public ClothesSO CurrentBodyClothes { get => _currentBodyClothes;}
+    public ClothesSO CurrentHeadClothes { get => _currentHeadClothes;}
+    public ClothesSO CurrentTorsoClothes { get => _currentTorsoClothes;}
+    public ClothesSO CurrentLegsClothes { get => _currentLegsClothes;}
+
+    public event Action OnItemChange;
+
+    public void ItemChanged()
+    {
+        OnItemChange?.Invoke();
+    }
 
     public void InitPlayerClothes()
     {
@@ -56,16 +68,16 @@ public class PlayerEquip : MonoBehaviour
         switch (newClothes.ClothesPart)
         {
             case ClothesParts.Body:
-                ChangeClothesAux(_currentBodyClothes, newClothes, _player.PlayerSO.BaseBodyClothes);
+                ChangeClothesAux(ref _currentBodyClothes, newClothes, _player.PlayerSO.BaseBodyClothes);
                 break;
             case ClothesParts.Head:
-                ChangeClothesAux(_currentHeadClothes, newClothes, _player.PlayerSO.BaseHeadClothes);
+                ChangeClothesAux(ref _currentHeadClothes, newClothes, _player.PlayerSO.BaseHeadClothes);
                 break;
             case ClothesParts.Torso:
-                ChangeClothesAux(_currentTorsoClothes, newClothes, _player.PlayerSO.BaseTorsoClothes);
+                ChangeClothesAux(ref _currentTorsoClothes, newClothes, _player.PlayerSO.BaseTorsoClothes);
                 break;
             case ClothesParts.Legs:
-                ChangeClothesAux(_currentLegsClothes, newClothes, _player.PlayerSO.BaseLegsClothes);
+                ChangeClothesAux(ref _currentLegsClothes, newClothes, _player.PlayerSO.BaseLegsClothes);
                 break;
             default:
                 break;
@@ -73,17 +85,18 @@ public class PlayerEquip : MonoBehaviour
         }
     }
 
-    private void ChangeClothesAux(ClothesSO currentClothes, ClothesSO newClothes, ClothesSO baseClothes)
+    private void ChangeClothesAux(ref ClothesSO currentClothes, ClothesSO newClothes, ClothesSO baseClothes)
     {
         if (currentClothes != null)
         {
             if (!currentClothes.IsBase)
             {
-                //retirar e devolver ao inventário se não for a base
+                _player.PlayerInventory.AddItens(currentClothes);
             }
         }
 
         currentClothes = newClothes;
+        ItemChanged();
         _player.PlayerAnimation.ChangeAnimSprites(baseClothes, currentClothes);
     }
 

@@ -8,6 +8,7 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private Transform _interactionButtonHolder;
     [SerializeField] private Transform _interactionButton;
+    [SerializeField] private InventoryUiPlayer _inventoryUiPlayer; 
 
     [Header("Parameters")]
     [SerializeField] private Vector3 _interactButtonOffset;
@@ -28,6 +29,11 @@ public class PlayerUI : MonoBehaviour
     {
         _interactionButton.gameObject.SetActive(false);
         _interactionButton.SetParent(_interactionButtonHolder);
+    }
+
+    public void InitInventoryUiPlayer(InventoryBase inventory)
+    {
+        _inventoryUiPlayer.SetInventory(inventory);
     }
 
 }

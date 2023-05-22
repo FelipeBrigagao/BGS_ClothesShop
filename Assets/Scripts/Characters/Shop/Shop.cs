@@ -41,6 +41,7 @@ public class Shop : MonoBehaviour, IInteractable
         _sellUi.SetInventory(_clientInventory);
         _buyUi.SetOtherInventory(_clientInventory);
         _shopUi.SetActive(true);
+
         //Opens shop ui
     }
 }
