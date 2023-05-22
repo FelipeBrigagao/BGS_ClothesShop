@@ -29,6 +29,28 @@ public class Player : MonoBehaviour
         InitPlayer();
     }
 
+    private void OnEnable()
+    {
+        if (UiManager.Instance)
+        {
+            UiManager.Instance.OnPlayerInventoryOpen += StopPlayer;
+            UiManager.Instance.OnShopInventoryOpen += StopPlayer;
+            UiManager.Instance.OnPlayerInventoryClose += StartPlayer;
+            UiManager.Instance.OnShopInventoryClose -= StartPlayer;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (UiManager.Instance)
+        {
+            UiManager.Instance.OnPlayerInventoryOpen -= StopPlayer;
+            UiManager.Instance.OnShopInventoryOpen -= StopPlayer;
+            UiManager.Instance.OnPlayerInventoryClose -= StartPlayer;
+            UiManager.Instance.OnShopInventoryClose -= StartPlayer;
+        }
+    }
+
     public void InitPlayer()
     {
         _playerMovement = GetComponent<PlayerMovement>();
@@ -52,12 +74,14 @@ public class Player : MonoBehaviour
     {
         _playerInput.StartReceivingInputs();
         _playerMovement.StartMovement();
+        _playerAction.StartDoingActions();
     }
 
     public void StopPlayer()
     {
         _playerInput.StopReceivingInputs();
         _playerMovement.StopMovement();
+        _playerAction.StopDoingActions();
     }
 
 }

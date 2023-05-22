@@ -17,6 +17,8 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private string _walkingVerticalAnimationKey;
     [SerializeField] private string _walkingSpeedAnimationKey;
 
+    private Vector2 _lookDownInput = new Vector2(0,-1);
+
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -51,5 +53,11 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
+    public void MakePlayerLookDown()
+    {
+        _animator.SetFloat(_walkingHorizontalAnimationKey, _lookDownInput.x);
+        _animator.SetFloat(_walkingVerticalAnimationKey, _lookDownInput.y);
+        _animator.SetFloat(_walkingSpeedAnimationKey, 0);
+    }
 
 }

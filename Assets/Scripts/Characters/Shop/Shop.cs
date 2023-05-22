@@ -37,11 +37,18 @@ public class Shop : MonoBehaviour, IInteractable
 
     public void Interact(GameObject interactor)
     {
+        if (UiManager.Instance.AnInventoryIsOpen) return;
+
         interactor.TryGetComponent<InventoryBase>(out _clientInventory);
         _sellUi.SetInventory(_clientInventory);
         _buyUi.SetOtherInventory(_clientInventory);
         _shopUi.SetActive(true);
+        UiManager.Instance.ShopInventoryOpen();
+    }
 
-        //Opens shop ui
+    public void CloseShopUI()
+    {
+        _shopUi.SetActive(false);
+        UiManager.Instance.ShopInventoryClose();
     }
 }

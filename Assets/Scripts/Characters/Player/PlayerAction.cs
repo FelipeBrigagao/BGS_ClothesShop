@@ -13,9 +13,12 @@ public class PlayerAction : MonoBehaviour
     private IInteractable _closestInteractable;
     private Collider2D[] _interactableColliders;
 
+    private bool _canDoActions;
+
     private void Update()
     {
-        CheckForInteractables();
+        if (_canDoActions)
+            CheckForInteractables();
     }
 
     public void InteractWithClosestObject()
@@ -62,8 +65,18 @@ public class PlayerAction : MonoBehaviour
             }
         }
 
+
     }
 
+    public void StartDoingActions()
+    {
+        _canDoActions = true;
+    }
+
+    public void StopDoingActions()
+    {
+        _canDoActions = false;
+    }
 
     private void OnDrawGizmos()
     {

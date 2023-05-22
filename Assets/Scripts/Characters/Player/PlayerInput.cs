@@ -25,6 +25,7 @@ public class PlayerInput : MonoBehaviour
         {
             ReceiveMoveInputs();
             CheckForInteraction();
+            CheckForOpenInventory();
         }
     }
 
@@ -40,6 +41,14 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(_interactionKey))
         {
             _player.PlayerAction.InteractWithClosestObject();
+        }
+    }
+
+    private void CheckForOpenInventory()
+    {
+        if (Input.GetKeyDown(_inventoryKey))
+        {
+            _player.PlayerUI.TurnInventoryOn();
         }
     }
 
