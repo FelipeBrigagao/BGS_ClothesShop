@@ -387,7 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1679440558169655930}
   _playerModel: {fileID: 1679440558690037110}
-  _animator: {fileID: 0}
+  _animator: {fileID: 1679440558412033634}
   _controllerOverrider: {fileID: 22100000, guid: 5f11fa708857733469c459ce1f87feee, type: 2}
   _walkingHorizontalAnimationKey: Horizontal
   _walkingVerticalAnimationKey: Vertical
